@@ -1,20 +1,44 @@
-Projeto de Demonstração de POO em Java: O Zoológico
-Este repositório contém um projeto educacional desenvolvido em Java para demonstrar, de forma prática e clara, os pilares da Programação Orientada a Objetos (POO).
+---
 
-🎯 Objetivo
-O objetivo principal é ilustrar os conceitos de Herança, Encapsulamento, Polimorfismo e Abstração através de uma hierarquia de classes que representam animais em um zoológico. A estrutura foi pensada para ser intuitiva e facilitar o entendimento de como esses conceitos se conectam.
+# 🦁 Projeto de Demonstração de POO em Java: Zoológico
 
-✨ Conceitos Abordados
-Este projeto serve como um exemplo prático dos seguintes conceitos fundamentais da POO:
+Este repositório contém um projeto educacional desenvolvido em **Java**, com o objetivo de demonstrar, de forma prática e didática, os principais pilares da **Programação Orientada a Objetos (POO)**.
 
-Herança: A estrutura de classes Animal -> Felino -> Leao/Tigre/Gato demonstra como atributos e métodos são herdados da classe mais genérica para as mais específicas.
-Encapsulamento: Os atributos das classes, como nome e idade, são declarados como private, e o acesso a eles é controlado por meio de métodos públicos (getters e setters).
-Polimorfismo: O método emitirSom() é chamado a partir de uma referência do tipo Animal, mas sua execução (o som que o animal faz) varia de acordo com o objeto real (Leão, Tigre ou Gato). Isso demonstra o polimorfismo de sobrescrita.
-Classes Abstratas: As classes Animal e Felino são declaradas como abstract, pois representam conceitos que não podem ser instanciados diretamente. Elas servem como um "contrato", forçando as subclasses concretas a implementarem seus métodos abstratos, como emitirSom().
-Sobrescrita de Métodos (@Override): Métodos da superclasse são sobrescritos nas subclasses para fornecer um comportamento mais específico, como visto em emitirSom(), alimentar() e movimentar().
-📂 Estrutura do Projeto
-O código está organizado na seguinte hierarquia de classes:
+## 🎯 Objetivo
 
+Ilustrar, através de uma hierarquia de classes representando animais em um zoológico, os seguintes conceitos fundamentais da POO:
+
+* **Herança**
+* **Encapsulamento**
+* **Polimorfismo**
+* **Abstração**
+
+A estrutura do código foi pensada para ser intuitiva e facilitar o entendimento de como esses conceitos se inter-relacionam.
+
+---
+
+## ✨ Conceitos Abordados
+
+* **Herança**
+  A estrutura `Animal → Felino → Leão/Tigre/Gato` demonstra como atributos e métodos são transmitidos de classes genéricas para específicas.
+
+* **Encapsulamento**
+  Os atributos das classes (como `nome` e `idade`) são declarados como `private`, com acesso controlado via métodos `get` e `set`.
+
+* **Polimorfismo**
+  O método `emitirSom()` é invocado a partir de uma referência do tipo `Animal`, mas o comportamento varia conforme a instância real (`Leão`, `Tigre` ou `Gato`), demonstrando **polimorfismo de sobrescrita**.
+
+* **Classes Abstratas**
+  As classes `Animal` e `Felino` são **abstratas**, pois representam conceitos que não podem ser instanciados diretamente. Elas funcionam como um contrato, obrigando as subclasses concretas a implementar métodos como `emitirSom()`.
+
+* **Sobrescrita de Métodos (`@Override`)**
+  Métodos das superclasses são sobrescritos nas subclasses para definir comportamentos específicos, como `emitirSom()`, `alimentar()` e `movimentar()`.
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
 .
 ├── ANIMAL.java       # Classe Abstrata Base
 ├── FELINO.java       # Subclasse Abstrata que herda de ANIMAL
@@ -22,32 +46,49 @@ O código está organizado na seguinte hierarquia de classes:
 ├── Tigre.java        # Classe Concreta que herda de FELINO
 ├── Gato.java         # Classe Concreta que herda de FELINO
 └── Zoologico.java    # Classe Principal (main) para testar a implementação
-🚀 Como Executar
-Para compilar e executar este projeto, você precisará ter o JDK (Java Development Kit) instalado em sua máquina.
+```
 
-Clone o repositório:
+---
 
-Bash
+## 🚀 Como Executar
 
+### Pré-requisitos
+
+* JDK (Java Development Kit) instalado
+
+### Passos
+
+1. Clone o repositório:
+
+```bash
 git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
-Navegue até o diretório do projeto:
+```
 
-Bash
+2. Acesse o diretório do projeto:
 
+```bash
 cd SEU-REPOSITORIO
-Compile todos os arquivos .java:
+```
 
-Bash
+3. Compile todos os arquivos `.java`:
 
+```bash
 javac *.java
-Execute a classe principal Zoologico:
+```
 
-Bash
+4. Execute a classe principal:
 
+```bash
 java Zoologico
-💻 Saída Esperada
-Após a execução, você verá a seguinte saída no terminal, demonstrando o polimorfismo em ação:
+```
 
+---
+
+## 💻 Saída Esperada
+
+Após executar o programa, o terminal exibirá a seguinte saída, demonstrando o **polimorfismo** em ação:
+
+```
 --- DEMONSTRAÇÃO DE POLIMORFISMO ---
 
 Animal: Simba, Idade: 5
@@ -67,3 +108,12 @@ Tom está comendo sua ração de salmão.
 O felino corre de forma ágil e silenciosa.
 Tom está se esfregando na sua perna e ronronando.
 --------------------
+```
+
+---
+
+## 📝 Considerações Finais
+
+Este projeto é uma excelente base para quem está aprendendo **POO** com **Java**, permitindo visualizar de forma prática os principais conceitos e como aplicá-los na construção de sistemas orientados a objetos.
+
+---
